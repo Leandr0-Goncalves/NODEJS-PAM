@@ -1,0 +1,27 @@
+GET http://localhost:3000/
+###
+GET http://localhost:3000/cliente/1
+ 
+###
+POST http://localhost:3000/cliente
+content-type: application/json
+ 
+{
+    "nome": "Felix",
+    "idade": 18,
+    "uf": "SP"
+}
+ 
+###
+PUT http://localhost:3000/cliente/1
+Content-type: application/json
+ 
+{
+    "nome": "Richard",
+    "idade": 18,
+    "uf": "SP"
+}
+ 
+###
+DELETE http://localhost:3000/cliente/5
+ 
