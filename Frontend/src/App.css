@@ -1,0 +1,301 @@
+/* From Uiverse.io by andrew-demchenk0 */
+.app {
+  background: linear-gradient(#ff8bcf, #49b7d8);
+  color: #dedede;
+  min-height: 100vh;
+}
+.geral {
+  margin-left: 10px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+  line-height: 1.4;
+} /* Layout principal */
+.geral {
+  max-width: 900px;
+  margin: auto;
+  padding: 1.5rem;
+}
+.Clientes {
+  color: black;
+  border-radius: 15px;
+}
+header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+header h1 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+header input {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  flex: 1;
+}
+header button {
+  margin-top: 0.5rem;
+} /* Botões */
+button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+button:hover {
+  background: #0056b3;
+}
+button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+button + button {
+  margin-left: 0.5rem;
+  background: #6c757d;
+}
+button + button:hover {
+  background: #5a6268;
+} /* Formulários */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-weight: bold;
+}
+form input {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+form div {
+  display: flex;
+  gap: 0.5rem;
+} /* Tabelas (com scroll horizontal no mobile) */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 0.9rem;
+}
+thead {
+  background: #f5a346;
+}
+th,
+td {
+  padding: 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid #e4e4e4;
+}
+td button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+}
+tr:last-child td {
+  border-bottom: none;
+} /* Responsividade */
+@media (max-width: 600px) {
+  header {
+    align-items: stretch;
+  }
+  header div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  form div {
+    flex-direction: column;
+  }
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  th,
+  td {
+    padding: 0.6rem;
+  }
+}
+.buttonre {
+  --main-focus: #2d8cf0;
+  --font-color: #323232;
+  --bg-color-sub: #dedede;
+  --bg-color: #eee;
+  --main-color: #202020;
+  position: relative;
+  width: 150px;
+  height: 27px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+  background-color: var(--font-color);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-left: 39px;
+}
+
+.buttonre,
+.buttonre__icon,
+.buttonre__text {
+  transition: all 0.3s;
+}
+
+.buttonre .buttonre__text {
+  transform: translateX(30px);
+  color: var(--main-color);
+  font-weight: 600;
+}
+
+.buttonre .buttonre__icon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 39px;
+  background-color: var(--bg-color-sub);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonre .svg {
+  width: 20px;
+  fill: var(--bg-color);
+}
+
+.buttonre:hover {
+  background: var(--bg-color);
+}
+
+.buttonre:hover .buttonre__text {
+  color: transparent;
+}
+
+.buttonre:hover .buttonre__icon {
+  width: 148px;
+  transform: translateX(0);
+}
+
+.buttonre:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0px 0px var(--main-color);
+}
+.buttonadd {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: #323232;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  background: #323232;
+}
+
+.buttonadd,
+.buttonadd span {
+  transition: 200ms;
+}
+
+.buttonadd .text {
+  transform: translateX(5px);
+  color: white;
+  font-weight: bold;
+}
+
+.buttonadd .icon {
+  position: absolute;
+  border-left: 1px solid #dedede;
+  transform: translateX(90px);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonadd svg {
+  width: 15px;
+  fill: #eee;
+}
+
+.buttonadd:hover {
+  background: #323232;
+}
+
+.buttonadd:active {
+  background: #323232;
+}
+
+.buttonadd:hover .text {
+  color: transparent;
+}
+
+.buttonadd:hover .icon {
+  width: 150px;
+  border-left: none;
+  transform: translateX(0);
+}
+
+.buttonadd:focus {
+  outline: none;
+}
+
+.buttonadd:active .icon svg {
+  transform: scale(0.8);
+}
+
+.buttonSpan {
+  color: white;
+  margin: 150px;
+  font-size: 30px;
+}
+
+.button-edit {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.button-edit:hover {
+  background: #333;
+}
+
+.button-delete {
+  background: #f5a346;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.button-delete:hover {
+  background: #d98825;
+}
